@@ -356,3 +356,12 @@
 .card-information>*:not(.visually-hidden:first-child)+*:not(.rating) {
     margin-top: 0rem;
 }
+
+@media screen and (max-width: 750px) {
+.card__information {
+    margin-top: 0%;
+    text-align: left;
+    background-color: transparent;
+    background: transparent;
+}
+}
