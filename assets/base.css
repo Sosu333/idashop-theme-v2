@@ -2992,6 +2992,18 @@ button.shopify-payment-button__button.shopify-payment-button__button--unbranded 
   }
 }
 
+span.switch {
+    right: 2em;
+    position: absolute;
+}
+@media screen and (max-width: 749px){
+  span.switch {
+    left: 2em;
+    position: absolute;
+}
+
+}
+
 a.boring-bits {
     text-decoration: none;
     color: inherit;
