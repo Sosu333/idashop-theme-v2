@@ -2999,7 +2999,7 @@ a.boring-bits {
 }
 @media screen and (max-width: 989px){
 .header--mobile-left {
-    grid-template-columns: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 div.product__info-container {
     text-align: center;
