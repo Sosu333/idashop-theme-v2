@@ -3112,6 +3112,9 @@ ul.thumbnail-list {
 .product__info-wrapper.grid__item {
     padding-top: 0em;
 }
+.product__title {
+    margin-top: 1.5rem;
+}
 }
 @media screen and (min-width: 749px){
 .product__info-wrapper.grid__item {
