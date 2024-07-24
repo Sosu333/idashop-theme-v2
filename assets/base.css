@@ -3117,9 +3117,7 @@ ul.thumbnail-list {
 }
 }
 @media screen and (min-width: 749px){
-.product__info-wrapper.grid__item {
-    padding-top: 12em !important;
-}
+
 a.header__heading-link.link.link--text.focus-inset {
     margin-left: 3em;
 }
@@ -3290,9 +3288,7 @@ button.product-form__submit.button.button--full-width.button--secondary {
     border: 0px !important;
 
 }
-.grid__item {
-    padding: 2em;
-}
+
 img.mySlides {
         padding: 10%;
         padding-top: 0;
