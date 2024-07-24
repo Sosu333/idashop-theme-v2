@@ -461,117 +461,172 @@
 {% endschema %}
 
 <style>
-.darksoul-toggle-container
-        {
-            width: 100px;
-            height: 90px;
-            margin: auto;
-            display: flex;
-            border-radius: 70px;
-            padding: 2px;
-            box-shadow: 10px 10px 10px rgba(16, 16, 16, 0.667), 0px -8px 10px rgba(32, 32, 32, 0.453), -5px -5px 15px rgb(17, 17, 17) inset, 15px 15px 50px rgb(26, 26, 26) inset;
-            transition: background-color 0.5s, box-shadow 0.5s;
-        }
-        .darksoul-toggle-border
-        {
-            width: 100px;
-            height: 90px;
-            background-color: rgb(23, 23, 23);
-            box-shadow: 5px 5px 10px rgb(23, 23, 23) inset, -4px -10px 10px rgb(25, 25, 25) inset;
-            border-radius: 70px;
-            margin: auto;
-            display: flex;
-            transition: background-color 0.5s, box-shadow 0.5s;
-        }
-        .darksoul-toggle
-        {
-            margin: auto;
-            margin-left: 15px;
-            width: 66px;
-            height: 66px;
-            background-color: rgb(23, 23, 23);
-            border: 1px solid rgba(28, 28, 28, 0);
-            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.312), -10px -10px 10px rgba(30, 30, 30, 0.696), 40px -5px 1px rgb(255, 255, 255) inset,  -2px 5px 10px rgba(23, 23, 23, 0.986) inset;
-            border-radius: 50%;
-            transition: box-shadow 1s;
-        }
-        .darksoul-toggle:hover
-        {
-            cursor: pointer;
-         
-        }
-        @keyframes roll 
-        {
-            100%
-            {
-                transform: translateX(170px) rotate(360deg);
-            }
-        }
-        @keyframes rollback 
-        { 
-            0%
-            {
-                transform: translateX(170px) rotate(360deg);
-            }
-            100%
-            {
-                transform: translateX(0px) rotate(0deg);
-            }
-        }
-        </style>
-<div class="darksoul-toggle-container" id="container">
-        <div class="darksoul-toggle-border" id="border">
-            <div class="darksoul-toggle" id="toggle" onclick="{roll()}">
-          
-            </div>
-        </div>
-    </div>
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+* {
+  margin: 0;
+  padding: 0;
+}
 
-    <script>
-    var toggle = document.getElementById("toggle");
-       // var bod = document.getElementsByClassName("codepigs-bg");
-        var border = document.getElementById("border");
-        var container = document.getElementById("container"); 
-        var flag = 0;
-       
-        function togglel() 
-        {
-            toggle.style.boxShadow = "5px 5px 500px rgb(255, 255, 0) inset, 0.5px 0.5px 50px yellow";
-            toggle.style.border = "1px solid rgb(255, 255, 255)";
-            toggle.style.backgroundColor = "orange";
-        }
-        function toggled() 
-        {
-            toggle.style.boxShadow = "10px 10px 15px rgba(0, 0, 0, 0.312), -10px -10px 10px rgba(30, 30, 30, 0.696), 40px -5px 1px rgb(255, 255, 255) inset,  -2px 5px 10px rgba(23, 23, 23, 0.986) inset";
-            toggle.style.border = "1px solid rgba(28, 28, 28, 0)";
-            toggle.style.backgroundColor = "rgb(23, 23, 23)";
-        }
-        function roll() 
-        {
-            if(flag==0)
-            {
-                toggle.style.animation = "roll 1.5s forwards";
-                container.style.boxShadow ="10px 10px 10px rgb(242, 241, 241), -4px -7px 15px rgb(242, 241, 241), 2px -5px 10px rgb(255, 255, 255) inset, -10px -1px 5px yellow inset";
-                border.style.backgroundColor = " rgb(255, 255, 255)";
-                border.style.boxShadow = "2px 5px 10px rgb(236, 235, 235) inset, -2px 0px 2px rgb(254, 254, 1) inset";
-              //  bod.style.backgroundColor = "rgb(253, 253, 253)"; 
-    
-                setTimeout(togglel, 250);
-                flag = 1;
-            }
-            else
-            {
-                toggle.style.animation = "rollback 1.5s forwards";
-                container.style.boxShadow ="10px 10px 10px rgba(16, 16, 16, 0.667), 0px -8px 10px rgba(32, 32, 32, 0.453), -5px -5px 15px rgb(17, 17, 17) inset, 15px 15px 50px rgb(26, 26, 26) inset";
-                border.style.backgroundColor = "rgb(23, 23, 23)";
-                border.style.boxShadow = "5px 5px 10px rgb(23, 23, 23) inset, -4px -10px 10px rgb(25, 25, 25) inset";
-             //   bod.style.backgroundColor = "rgb(23, 23, 23)"; 
+body {
+  min-height: 100vh;
+  background-color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
-                setTimeout(toggled, 250);
-                flag = 0;
-            }
-        }
-        </script>
+.title {
+  font-family: "Ubuntu";
+  color: #333333;
+  font-size: 1.5em;
+}
+.title #light-text {
+  color: skyblue;
+  margin: 5px;
+}
+.title #dark-text {
+  color: #161e54;
+  margin: 5px;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 11em;
+  height: 5em;
+  background-image: linear-gradient(90deg, #161e54 50%, skyblue 50%);
+  background-size: 200% 100%;
+  background-position: 100% 100%;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1) inset;
+  padding: 0;
+  border-radius: 2.5em;
+  display: flex;
+  align-items: center;
+  transition: 0.7s;
+}
+.toggle-switch input {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  z-index: 999;
+}
+.toggle-switch .round-button {
+  position: relative;
+  transform: translateX(-5%);
+  height: 100%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+.toggle-switch .round-button .button-body {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: radial-gradient(#ffcc33 30%, #fc9601);
+  box-shadow: 0 0 20px #ffcc33;
+}
+.toggle-switch .round-button div:nth-child(1) {
+  height: 90%;
+  aspect-ratio: 1;
+  position: absolute;
+  z-index: 1;
+  background-image: radial-gradient(transparent 80%, #fc9601);
+  transform: rotateZ(30deg);
+  transition: 0.4s;
+}
+.toggle-switch .round-button div:nth-child(2) {
+  height: 90%;
+  aspect-ratio: 1;
+  position: absolute;
+  z-index: 1;
+  background-image: radial-gradient(transparent 80%, #fc9601);
+  transform: rotateZ(60deg);
+  transition: 0.4s;
+}
+.toggle-switch .round-button div:nth-child(3) {
+  height: 90%;
+  aspect-ratio: 1;
+  position: absolute;
+  z-index: 1;
+  background-image: radial-gradient(transparent 80%, #fc9601);
+  transform: rotateZ(90deg);
+  transition: 0.4s;
+}
+.toggle-switch input:checked ~ .round-button {
+  transform: translateX(calc(11em - 95%));
+}
+.toggle-switch input:checked ~ .round-button .button-body {
+  background-image: radial-gradient(#f4f4f4, #cacaca);
+  box-shadow: 0 0 20px #f4f4f4;
+}
+.toggle-switch input:checked ~ .round-button div:nth-child(1) {
+  height: 5%;
+  aspect-ratio: 1;
+  transform: rotateZ(90deg) translate(-1em, 0.5em) !important;
+  border-radius: 50%;
+  background-color: #cacaca;
+  transform: rotateZ(180deg);
+}
+.toggle-switch input:checked ~ .round-button div:nth-child(2) {
+  height: 10%;
+  aspect-ratio: 1;
+  transform: rotateZ(90deg) translate(0em, 1em) !important;
+  border-radius: 50%;
+  background-color: #cacaca;
+  transform: rotateZ(180deg);
+}
+.toggle-switch input:checked ~ .round-button div:nth-child(3) {
+  height: 15%;
+  aspect-ratio: 1;
+  transform: rotateZ(90deg) translate(-1em, 1.5em) !important;
+  border-radius: 50%;
+  background-color: #cacaca;
+  transform: rotateZ(180deg);
+}
+</style>
+<div class="toggle-switch">
+  <input type="checkbox"/>
+  <div class="round-button">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="button-body"></div>
+  </div>
+</div>
+<div class="title">
+  <p>
+     Toggle Switch for<span id="light-text">Light</span>-<span id="dark-text">Dark</span>Theme</p>
+</div>
+<script>
+
+jQuery(document).ready(function($){
+  $("input").click(function () {
+    if ($("input").is(":checked")) {
+      $(".title h1").text("Dark Mode");
+      $("body").css("background-color", "#111111");
+      $(".toggle-switch").css({
+        "background-position": "5% 100%",
+        "box-shadow": "0 0 15px 10px hsl(0,0,0,0.1) inset"
+      });
+    } else {
+      $(".title h1").text("Light Mode");
+      $("body").css("background-color", "white");
+      $(".toggle-switch").css({
+        "background-position": "100% 100%",
+        "box-shadow": "0 0 15px 10px hsl(0,0,0,0.1) inset"
+      });
+    }
+  });
+});
+
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
 <div class="hidden_styles"></div>
 <script>
