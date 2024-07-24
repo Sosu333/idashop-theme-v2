@@ -3117,6 +3117,9 @@ ul.thumbnail-list {
 .product__info-wrapper.grid__item {
     padding-top: 12em !important;
 }
+a.header__heading-link.link.link--text.focus-inset {
+    margin-left: 3em;
+}
 }
 
 
@@ -3131,9 +3134,7 @@ ul.thumbnail-list {
     z-index: 9999999;
 }
 
-a.header__heading-link.link.link--text.focus-inset {
-    margin-left: 3em;
-}
+
 .codepigs-sub-nav {
     margin-left: 2.5em;
 }
