@@ -511,11 +511,16 @@ function toggleDark(){
     $('.gradient').css('background','#000000' + ' !important');
     $('.gradient').css('background-color','#000000' + ' !important');
     $('.hidden_styles').html('<style>html.js{background:#000000' + ';background-color:#000000' + ';}</style>');
+    $('body').css('color', '#ffffff');
+    $('p').css('color', '#ffffff');
+    $('span').css('color', '#ffffff');
+    $('h1, h2, h3, h4, h5, h6').css('color', '#ffffff');
+    $('a').css('color', '#ffffff');
 }
 
 function toggleLight(){
   console.log('toggle light mode on');
-  $('div').css('background-color','#ffffff');
+    $('div').css('background-color','#ffffff');
     $('section').css('background-color','#ffffff' + ' !important');
     $('body.codepigs-bg').css('background-color','#ffffff' + ' !important');
     $('body.codepigs-bg').css('background','#ffffff' + ' !important');
@@ -531,6 +536,11 @@ function toggleLight(){
     $('.gradient').css('background','#ffffff' + ' !important');
     $('.gradient').css('background-color','#ffffff' + ' !important');
     $('.hidden_styles').html('<style>html.js{background:#ffffff' + ';background-color:#ffffff' + ';}</style>');
+    $('body').css('color', '#000000');
+    $('p').css('color', '#000000');
+    $('span').css('color', '#000000');
+    $('h1, h2, h3, h4, h5, h6').css('color', '#000000');
+    $('a').css('color', '#000000');
 }
 
 
