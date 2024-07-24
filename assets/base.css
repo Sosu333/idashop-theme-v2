@@ -2998,7 +2998,7 @@ span.switch {
 }
 @media screen and (max-width: 749px){
   span.switch {
-    left: 2em;
+    left: 1em;
     position: absolute;
 }
 
