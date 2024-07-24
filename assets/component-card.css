@@ -348,7 +348,7 @@
 }
 .card__heading,
 .card-information {
-    text-align: left;
+    text-align: center;
     background:transparent;
     background-color:transparent;
 }
@@ -359,7 +359,7 @@
 @media screen and (max-width: 750px) {
 .card__information {
     margin-top: 0%;
-    text-align: left;
+    text-align: center;
     background-color: transparent;
     background: transparent;
 }
