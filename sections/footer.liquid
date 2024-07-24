@@ -466,6 +466,9 @@
 <script>
   jQuery(document).ready(function($){
 
+  jQuery('body.gradient').removeClass('gradient');
+   jQuery('body').addClass('codepigs-bg');
+
   if ($('#switch-rounded').is(':checked')) {
     // Checkbox is checked
     console.log('Checkbox is checked');
@@ -492,60 +495,53 @@
 
 function toggleDark(){
   console.log('toggle dark mode on');
+  $('div').css('background-color','#000000');
+    $('section').css('background-color','#000000' + ' !important');
+    $('body.codepigs-bg').css('background-color','#000000' + ' !important');
+    $('body.codepigs-bg').css('background','#000000' + ' !important');
+    $('html.js').css('background-color','#000000' + ' !important');
+    $('html.js').css('background','#000000' + ' !important');
+    $(':root').css('background-color','#000000' + ' !important');
+    $(':root').css('background','#000000' + ' !important');
+    $('main#MainContent').css('background-color','#000000' + ' !important');
+    $('body.gradient').css('background-color','#000000' + ' !important');
+    $('body.gradient').css('background','#000000' + ' !important');
+    $('section#shopify-section-template--17708297257237__main').css('background','#000000' + ' !important');
+    $('main#MainContent').css('background','#000000' + ' !important');
+    $('.gradient').css('background','#000000' + ' !important');
+    $('.gradient').css('background-color','#000000' + ' !important');
+    $('.hidden_styles').html('<style>html.js{background:#000000' + ';background-color:#000000' + ';}</style>');
 }
 
 function toggleLight(){
   console.log('toggle light mode on');
+  $('div').css('background-color','#ffffff');
+    $('section').css('background-color','#ffffff' + ' !important');
+    $('body.codepigs-bg').css('background-color','#ffffff' + ' !important');
+    $('body.codepigs-bg').css('background','#ffffff' + ' !important');
+    $('html.js').css('background-color','#ffffff' + ' !important');
+    $('html.js').css('background','#ffffff' + ' !important');
+    $(':root').css('background-color','#ffffff' + ' !important');
+    $(':root').css('background','#ffffff' + ' !important');
+    $('main#MainContent').css('background-color','#ffffff' + ' !important');
+    $('body.gradient').css('background-color','#ffffff' + ' !important');
+    $('body.gradient').css('background','#ffffff' + ' !important');
+    $('section#shopify-section-template--17708297257237__main').css('background','#ffffff' + ' !important');
+    $('main#MainContent').css('background','#ffffff' + ' !important');
+    $('.gradient').css('background','#ffffff' + ' !important');
+    $('.gradient').css('background-color','#ffffff' + ' !important');
+    $('.hidden_styles').html('<style>html.js{background:#ffffff' + ';background-color:#ffffff' + ';}</style>');
 }
 
 
 
 
 
-
-    var randomColor = Math.floor(Math.random()*16777215).toString(16);
-    function randomIntFromInterval(min, max) { // min and max included 
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
-    const rndInt = randomIntFromInterval(0, 2);
-
-    let colours = ['ffffff', 'ffffff', 'ffffff'];
-jQuery('div').css('background-color','#' + colours[rndInt]);
-    jQuery('section').css('background-color','#' + colours[rndInt] + ' !important');
-   
-   jQuery('body.gradient').removeClass('gradient');
-   jQuery('body').addClass('codepigs-bg');
-
-
-
-    jQuery('body.codepigs-bg').css('background-color','#' + colours[rndInt] + ' !important');
-    jQuery('body.codepigs-bg').css('background','#' + colours[rndInt] + ' !important');
-    jQuery('html.js').css('background-color','#' + colours[rndInt] + ' !important');
-    jQuery('html.js').css('background','#' + colours[rndInt] + ' !important');
-
-    jQuery(':root').css('background-color','#' + colours[rndInt] + ' !important');
-    jQuery(':root').css('background','#' + colours[rndInt] + ' !important');
-
-
-
-
-
-    jQuery('main#MainContent').css('background-color','#' + colours[rndInt] + ' !important');
-
-    $('body.gradient').css('background-color','#' + colours[rndInt] + ' !important');
-       $('body.gradient').css('background','#' + colours[rndInt] + ' !important');
-    jQuery('section#shopify-section-template--17708297257237__main').css('background','#' + colours[rndInt] + ' !important');
-     jQuery('main#MainContent').css('background','#' + colours[rndInt] + ' !important');
-     jQuery('.gradient').css('background','#' + colours[rndInt] + ' !important');
-     jQuery('.gradient').css('background-color','#' + colours[rndInt] + ' !important');
-      //jQuery('.overlay').css('background','transparent !important');
     
 
-    jQuery('.grid__item.product__media-wrapper.medium-hide.large-up-hide').slick();
 
-    jQuery('.hidden_styles').html('<style>html.js{background:#' + colours[rndInt] + ';background-color:#' + colours[rndInt] + ';}</style>');
 
+     jQuery('.grid__item.product__media-wrapper.medium-hide.large-up-hide').slick();
     jQuery('.price').each(function(e){
       $(this).css('background-color','');
        $(this).css('background','');
