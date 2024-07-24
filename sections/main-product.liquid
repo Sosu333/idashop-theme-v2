@@ -710,6 +710,14 @@ position:unset;
       </div>
   {% endfor %}
   </div>
+
+  <div class="codepigs-slider-nav">
+    {% for image in product.images %}
+      <div>
+        <img class="mySlides" src="{{ image | img_url: 'master' }}" style="width:100%">
+      </div>
+  {% endfor %}
+  </div>
       </div>
     {%- endif -%}
   </div>
