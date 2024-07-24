@@ -532,7 +532,6 @@
         var bod = document.getElementsByClassName("codepigs-bg");
         var border = document.getElementById("border");
         var container = document.getElementById("container"); 
-        var disclaimer = document.getElementById("disclaimer");
         var flag = 0;
        
         function togglel() 
@@ -556,7 +555,7 @@
                 border.style.backgroundColor = " rgb(255, 255, 255)";
                 border.style.boxShadow = "2px 5px 10px rgb(236, 235, 235) inset, -2px 0px 2px rgb(254, 254, 1) inset";
                 bod.style.backgroundColor = "rgb(253, 253, 253)"; 
-                disclaimer.style.color = "black";
+    
                 setTimeout(togglel, 250);
                 flag = 1;
             }
@@ -567,7 +566,7 @@
                 border.style.backgroundColor = "rgb(23, 23, 23)";
                 border.style.boxShadow = "5px 5px 10px rgb(23, 23, 23) inset, -4px -10px 10px rgb(25, 25, 25) inset";
                 bod.style.backgroundColor = "rgb(23, 23, 23)"; 
-                disclaimer.style.color = "white";
+
                 setTimeout(toggled, 250);
                 flag = 0;
             }
