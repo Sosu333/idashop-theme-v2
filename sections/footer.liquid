@@ -465,6 +465,44 @@
 <div class="hidden_styles"></div>
 <script>
   jQuery(document).ready(function($){
+
+  if ($('#switch-rounded').is(':checked')) {
+    // Checkbox is checked
+    console.log('Checkbox is checked');
+    toggleDark();
+} else {
+    // Checkbox is not checked
+    console.log('Checkbox is not checked');
+    toggleLight();
+}
+
+
+
+            // Check the status whenever the checkbox is clicked
+            $('#switch-rounded').on('change', function() {
+                if ($(this).is(':checked')) {
+                    console.log('Checkbox is checked');
+                    toggleDark();
+                } else {
+                    console.log('Checkbox is not checked');
+                    toggleLight();
+                }
+            });
+
+
+function toggleDark(){
+  console.log('toggle dark mode on');
+}
+
+function toggleLight(){
+  console.log('toggle light mode on');
+}
+
+
+
+
+
+
     var randomColor = Math.floor(Math.random()*16777215).toString(16);
     function randomIntFromInterval(min, max) { // min and max included 
   return Math.floor(Math.random() * (max - min + 1) + min)
