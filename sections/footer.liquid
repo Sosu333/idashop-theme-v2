@@ -556,7 +556,7 @@ $('h1, h2, h3, h4, h5, h6').css('color', '#ffffff');
 $('a').css('color', '#ffffff');
 
 $('.switch label').css('border', '2px solid #ffffff');
-$('.switch label::after').css('background', '#ffffff');
+$('.switch input:checked ~ label::after').css('background', '#ffffff');
 
 $('select.select__select').css('border', '2px solid #ffffff !important');
 $('select.select__select').css('color', '#ffffff !important');
