@@ -208,6 +208,17 @@ position:unset;
     justify-content: space-between;
     /* flex-flow: column; */
 }
+img.mySlides {
+    padding-bottom: 0px !important;
+}
+@media screen and (max-width: 750px) {
+.codepigs-margin-right {
+    margin-right: 1em;
+}
+.codepigs-margin-left {
+    margin-left: 1em;
+}
+}
   
 </style>
 
@@ -219,6 +230,16 @@ position:unset;
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
      
        <div class="codepigs-slider-mobile">
+    {% for image in product.images %}
+      <div>
+        <img class="mySlides" src="{{ image | img_url: 'master' }}" style="width:100%">
+      </div>
+  {% endfor %}
+  </div>
+</div>
+  <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+    <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
+  <div class="codepigs-slider-mobile-nav">
     {% for image in product.images %}
       <div>
         <img class="mySlides" src="{{ image | img_url: 'master' }}" style="width:100%">
