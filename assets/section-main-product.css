@@ -1268,6 +1268,10 @@ variant-selects.no-js-hidden {
     width: 100% !important;
 }
 @media screen and (min-width: 749px){
+  .product__info-wrapper.grid__item {
+    padding-right: 10% !important;
+}
+
 button.product-form__submit.button.button--full-width.button--secondary {
     text-align: center !important;
 }
