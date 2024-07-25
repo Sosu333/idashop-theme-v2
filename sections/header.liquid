@@ -26,7 +26,10 @@
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
-
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 <style>
   header-drawer {
     justify-self: start;
@@ -42,6 +45,14 @@
       display: none;
     }
   }
+
+
+.card-wrapper.product-card-wrapper.underline-links-hover.bg {
+  animation: backInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+
 
   .menu-drawer-container {
     display: flex;
