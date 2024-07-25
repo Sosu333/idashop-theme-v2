@@ -952,12 +952,12 @@ function updateCartCount() {
     jQuery.getJSON('/cart.js', function(cart) {
         var itemCount = cart.item_count;
         // Update the cart count element
-        $('.codepigs-menu-cart-count').text('(' + itemCount + ')');
+        jQuery('.codepigs-menu-cart-count').text('(' + itemCount + ')');
     });
 }
 
 // Listen for the 'cart.requestComplete' event
-$(document).on('cart.requestComplete', function(event, cart) {
+jQuery(document).on('cart.requestComplete', function(event, cart) {
   console.log('Cart request complete');
     // Call the updateCartCount function when the cart is updated
     updateCartCount();
