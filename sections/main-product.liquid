@@ -303,6 +303,7 @@ img.mySlides {
                   {{ product.description }}
                 </div>
               {%- endif -%}
+              <a class="size-guide-trigger" data-micromodal-trigger="modal-1">Size Guide</a>
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
@@ -525,7 +526,7 @@ img.mySlides {
                 {%- endif -%}
               {%- endunless -%}
 
-              <a class="size-guide-trigger" data-micromodal-trigger="modal-1">Size Guide</a>
+              
             {%- when 'buy_buttons' -%}
               <div class="product-form-container-codepigs" {{ block.shopify_attributes }}>
                 <product-form class="product-form">
