@@ -663,12 +663,43 @@ button.product-form__submit.button.button--full-width.button--secondary {
 button.product-form__submit.button.button--full-width.button--secondary {
     min-width: 100% !important;
 }
+
 select.select__select {
-    text-align: center;
-    text-align: -webkit-center;
-     -webkit-appearance: none; /* Remove default styling on iOS devices */
-  
+    font-size: inherit;
+    text-align: center;          /* Center text for most browsers */
+    text-align-last: center;     /* Center selected option text for most browsers */
+    padding-left: 0;             /* Reset left padding */
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: 1px solid;
+    height: 4.5rem;
+    -webkit-appearance: none;    /* Remove default styling on iOS devices */
+    appearance: none;            /* Remove default styling on all devices */
+    display: block;              /* Ensure the select element behaves like a block-level element */
+    margin: 0 auto;              /* Center the select element itself if it's narrower than its container */
 }
+
+/* For consistent appearance on Apple devices */
+select.select__select::-ms-expand {
+    display: none;               /* Remove default dropdown arrow in Internet Explorer */
+}
+
+/* Custom arrow for select element */
+select.select__select::after {
+    content: '';
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0.3em solid transparent;
+    border-top-color: #000;      /* Change arrow color if needed */
+    pointer-events: none;
+}
+
+
+
 @media screen and (max-width: 749px){
 main.password-main {
     max-height: 80vh !important;
