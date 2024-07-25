@@ -958,6 +958,7 @@ function updateCartCount() {
 
 // Listen for the 'cart.requestComplete' event
 $(document).on('cart.requestComplete', function(event, cart) {
+  console.log('Cart request complete');
     // Call the updateCartCount function when the cart is updated
     updateCartCount();
 });
