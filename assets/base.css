@@ -3065,13 +3065,7 @@ ul.thumbnail-list {
 .bg .overlay p {
   font-family: "Julius Sans One", sans-serif;
 }
-.bg:hover .overlay {
-  opacity: 1;
-}
-.bg:hover img {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-}
+
 .template-search.template-search--empty.section-template--17877048721719__main-padding {
     min-height: 80vh;
 }
