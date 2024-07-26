@@ -3467,3 +3467,8 @@ body.password .newsletter-form__field-wrapper .newsletter-form__button:after {
 .grid__item.item-1 {
     margin-top: -5em;
 }
+
+span.price-item.price-item--sale.price-item--last, span.price-item.price-item--regular, span.product-card--sizes {
+    font-size: small;
+    color: black;
+}
