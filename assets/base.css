@@ -3142,8 +3142,7 @@ a.header__menu-item.list-menu__item.link.link--text.focus-inset.cart__toggle {
 }
 
 h3.card__heading a {
-    font-weight: 700;
-    font-size: large;
+    font-size: larger;
     color: black;
 }
 span.price-item.price-item--sale.price-item--last,
