@@ -184,7 +184,8 @@ a.video-link {
                 n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
                 console.log(n);
             })();
-
+            var identifyUserManually = sendinblue.identify('jonny@codepigser.com');
+            console.table(identifyUserManually);
             $('button#Subscribe').click(function(e) {
             e.preventDefault();
                 var email = $('input#NewsletterForm--template--23135931400495__main').val();
