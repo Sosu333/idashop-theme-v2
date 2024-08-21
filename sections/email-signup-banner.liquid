@@ -187,12 +187,24 @@ a.video-link {
 
             $('button#Subscribe').click(function(e) {
             e.preventDefault();
-                var email = $('#NewsletterForm--template--17922284060975__main').val();
+                var email = $('input#NewsletterForm--template--23135931400495__main').val();
                 var properties = {};
 
                 var identifyUser = sendinblue.identify(email, properties);
                 console.table(identifyUser);
-                $('#NewsletterForm--template--17922284060975__main').val('');
+                if (identifyUser) {
+    $('button#Subscribe').after().html('<h3 class="sign-up-response">Thank you, we will email you when the shop is open</h3>');
+} else {
+    $('button#Subscribe').after().html('<h3 class="sign-up-response">There has been an issue with your submission, please try again</h3>');
+}
+               // Set a timeout to fade out and remove the message after 3 seconds
+setTimeout(function() {
+    $('.sign-up-response').fadeOut('slow', function() {
+        $(this).remove();
+    });
+}, 3000); // 3000 milliseconds = 3 seconds
+
+                $('input#NewsletterForm--template--23135931400495__main').val('');
             });
 
 
