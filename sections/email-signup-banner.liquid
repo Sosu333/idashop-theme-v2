@@ -193,6 +193,8 @@ a.video-link {
                 var identifyUser = sendinblue.identify(email, properties);
                 console.table(identifyUser);
                 console.table(email);
+                console.table(sendinblue);
+                console.table(window.sendinblue);
                 if (identifyUser) {
     $('button#Subscribe').after().html('<h3 class="sign-up-response">Thank you, we will email you when the shop is open</h3>');
 } else {
