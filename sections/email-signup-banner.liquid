@@ -190,7 +190,7 @@ a.video-link {
                 var email = $('input#NewsletterForm--template--23135931400495__main').val();
                 var properties = {};
 
-                var identifyUser = sendinblue.identify(email, properties);
+                var identifyUser = Brevo.identify(email, properties);
                 console.table(identifyUser);
                 console.table(email);
                 console.table(sendinblue);
