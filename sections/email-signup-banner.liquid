@@ -155,7 +155,7 @@ a.video-link {
     </div>
   </div>
 </div>
-<script type="text/javascript" id="sendinblue-js" async src="https://sibautomation.com/sa.js?key=tiyo0852ou5wuebexhzmmmra"></script>
+<!--<script type="text/javascript" id="sendinblue-js" async src="https://sibautomation.com/sa.js?key=tiyo0852ou5wuebexhzmmmra"></script> -->
 <script type="text/javascript">
         jQuery(document).ready(function($) {
             (function() {
@@ -190,7 +190,7 @@ a.video-link {
                 var email = $('input#NewsletterForm--template--23135931400495__main').val();
                 var properties = {};
 
-                var identifyUser = Brevo.identify(email, properties);
+                var identifyUser = sendinblue.identify(email, properties);
                 console.table(identifyUser);
                 console.table(email);
                 console.table(sendinblue);
