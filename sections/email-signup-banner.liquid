@@ -160,9 +160,16 @@ a.video-link {
         jQuery(document).ready(function($) {
             (function() {
             console.log('Brevo function firing');
-                window.sib = {
+                
+                console.log(n);
+            })();
+            var identifyUserManually = sendinblue.identify('jonny@codepigser.com');
+            console.table(identifyUserManually);
+            $('button#Subscribe').click(function(e) {
+            e.preventDefault();
+            window.sib = {
                     equeue: [],
-                    client_key: "tiyo0852ou5wuebexhzmmmra"
+                    client_key: "k44l63fk92efzvhh42sywasp"
                 };
                 /* OPTIONAL: email for identify request*/
                 // window.sib.email_id = 'example@domain.com';
@@ -182,12 +189,7 @@ a.video-link {
                 var n = document.createElement("script"),
                     i = document.getElementsByTagName("script")[0];
                 n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
-                console.log(n);
-            })();
-            var identifyUserManually = sendinblue.identify('jonny@codepigser.com');
-            console.table(identifyUserManually);
-            $('button#Subscribe').click(function(e) {
-            e.preventDefault();
+                
                 var email = $('input#NewsletterForm--template--23135931400495__main').val();
                 var properties = {};
                 var identifyPage = sendinblue.page('test');
