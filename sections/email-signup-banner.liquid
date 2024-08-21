@@ -184,32 +184,29 @@ a.video-link {
                 n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
                 console.log(n);
             })();
-            var identifyUserManually = sendinblue.identify('jonny@codepigser.com');
+           
             console.table(identifyUserManually);
             $('button#Subscribe').click(function(e) {
             e.preventDefault();
                 var email = $('input#NewsletterForm--template--23135931400495__main').val();
                 var properties = {};
-                var identifyPage = sendinblue.page('test');
+                
                  console.table(identifyPage);
                 var identifyUser = sendinblue.identify(email, properties);
-                console.table(identifyUser);
-                console.table(email);
-                console.table(sendinblue);
-                console.table(window.sendinblue);
-                if (identifyUser) {
-    $('button#Subscribe').after().html('<h3 class="sign-up-response">Thank you, we will email you when the shop is open</h3>');
-} else {
-    $('button#Subscribe').after().html('<h3 class="sign-up-response">There has been an issue with your submission, please try again</h3>');
-}
-               // Set a timeout to fade out and remove the message after 3 seconds
-setTimeout(function() {
-    $('.sign-up-response').fadeOut('slow', function() {
-        $(this).remove();
-    });
-}, 3000); // 3000 milliseconds = 3 seconds
+                setTimeout(function() {
+        // This delay is just a quick fix to allow time for the async identify call
+        $('button#Subscribe').after('<h3 class="sign-up-response">Thank you, we will email you when the shop is open</h3>');
+        // Clear input
+        $('input#NewsletterForm--template--23135931400495__main').val('');
 
-                $('input#NewsletterForm--template--23135931400495__main').val('');
+        // Remove the message after 3 seconds
+        setTimeout(function() {
+            $('.sign-up-response').fadeOut('slow', function() {
+                $(this).remove();
+            });
+        }, 3000);
+    }, 1000); // Adjust the timing based on your needs
+
             });
 
 
