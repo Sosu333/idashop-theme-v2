@@ -190,7 +190,8 @@ a.video-link {
             e.preventDefault();
                 var email = $('input#NewsletterForm--template--23135931400495__main').val();
                 var properties = {};
-
+                var identifyPage = sendinblue.page('test');
+                 console.table(identifyPage);
                 var identifyUser = sendinblue.identify(email, properties);
                 console.table(identifyUser);
                 console.table(email);
